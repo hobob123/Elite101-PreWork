@@ -1,7 +1,7 @@
 import random
 
 def response():
-  possible_responses =  ["Hi,",
+  possible_responses =  ["Hi!",
                          "Coding is fun.",
                          "I like cheese"]
   return random.choice(possible_responses)
@@ -12,18 +12,18 @@ def myMood():
                          "sad",
                          "excited",
                          "bored",
-                         "irritate"]
+                         "irritated"]
   return random.choice(possible_responses)
 
 def convo():
   user_in = input("Hello! I am a chatbot. Type \"q\" to end the interaction \nHow are you?\n")
   quit_char = "q"
-  print("hi")
+  
   while (user_in != quit_char):
-    user_in = input(response() + "\n")
-    if(user_in.lower().contains("i feel")):
+    if("i feel" in user_in.lower()):
       print("Oh! I feel " + myMood())
-
+    else:
+      user_in = input(response() + "\n")
 
 if __name__ == "__main__":
   convo()
