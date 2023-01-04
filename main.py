@@ -21,7 +21,7 @@ def convo():
   
   while (user_in != quit_char):
     if("i feel" in user_in.lower()):
-      print("Oh! I feel " + myMood())
+      user_in = input("Oh! I feel " + myMood() + "\n")
     else:
       user_in = input(response() + "\n")
 
